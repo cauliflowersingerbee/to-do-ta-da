@@ -2,80 +2,30 @@
 
 function newItem(){
 
-    //javascript
-    //1. Adding a new item to the list of items:   
-
-    //JS
-    /*let li = document.createElement("li");
-       let inputValue = document.getElementById("input").value;
-       let text = document.createTextNode(inputValue);
-       li.appendChild(text);
-       */
-
-      //JQuery
-       let li = $('<li></li>');
-       let inputValue = $('#input').val();
+      //adding item to list of items
+      let li = $('<li></li>');
+      let inputValue = $('#input').val();
        li.append(inputValue);
 
-      //JS
-      /* if (inputValue === '') {
-         alert("You must write something!");
-       } else {
-         let list = document.querySelector('#list');
-         list.appendChild(li);
-       } */
-
-      //JQuery
-       if (inputValue === ''){
+      if (inputValue === ''){
          alert("You must write something!");
        } else {
          $('#list').append.$(li);
        }
 
-
-    
-     //2. Crossing out an item from the list of items:
-      /* JS 
+      //crossing out item from list of items
       function crossOut() {
-             li.classList.toggle("strike");
-         }
-    
-         li.addEventListener("dblclick",crossOut);
-
-          */
-
-         function crossOut() {
-           li.toggleClass("strike");
+        li.toggleClass("strike");
          }
 
-         li.on("dblclick", function crossOut() {
+        li.on("dblclick", function crossOut() {
            li.addClass("strike");
          });
 
 
-       
-    
      //3(i). Adding the delete button "X": 
-       let crossOutButton = document.createElement("crossOutButton");
-         crossOutButton.appendChild(document.createTextNode("X"));
-         li.appendChild(crossOutButton);
-    
-         crossOutButton.addEventListener("click", deleteListItem);
-
-        //JQUERY
-        let crossOutButton = $('<crossOutButton></crossOutButton>');
-         crossOutButton.append(document.createTextNode('X'));
-         li.append(crossOutButton);
-
-
-     //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
-     //JAVASCRIPT  
-     /*function deleteListItem(){
-             li.classList.add("delete")
-         } */
-
-    //JQUERY
-     crossOutButton.on("click", deleteListItem);
+       
+    crossOutButton.on("click", deleteListItem);
       function deleteListItem(){
     		li.addClass("delete")
      	}
@@ -94,8 +44,7 @@ function newItem(){
 
     DOM Selection:
 
-    1. You can perform the rough equivalent of a
-    document.querySelectAll function like so:
+    1. document.querySelectAll:
 
     let element = $('.my-class');
     
