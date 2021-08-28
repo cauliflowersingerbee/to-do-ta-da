@@ -29,9 +29,10 @@ function newItem(){
        if (inputValue === ''){
          alert("You must write something!");
        } else {
-         $('#list').append.$(li);
+         $('#list').append(li);
        }
 
+<<<<<<< Updated upstream
 
     
      //2. Crossing out an item from the list of items:
@@ -51,6 +52,17 @@ function newItem(){
          li.on("dblclick", function crossOut() {
            li.addClass("strike");
          });
+=======
+      //crossing out item from list of items
+
+         function crossout() {
+           li.toggleClass('strike');
+         }
+
+         li.on("dblclick", function crossOut() {
+          li.addClass("strike");
+        });
+>>>>>>> Stashed changes
 
 
        
@@ -85,6 +97,7 @@ function newItem(){
      $('#list').sortable();
     
     }
+<<<<<<< Updated upstream
     
     
 
@@ -380,3 +393,6 @@ function newItem(){
 
     
     */
+=======
+    
+>>>>>>> Stashed changes
